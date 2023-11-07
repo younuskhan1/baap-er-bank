@@ -1,0 +1,59 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+#heading-bank {
+    font-size: 35px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    margin-top: 35px;
+    color: purple;
+}
+
+#partial-heading {
+    color: crimson;
+}
+
+#bank-section {
+    width: 70%;
+    background-color: aquamarine;
+    margin: 35px auto;
+    padding: 30px 30px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#login-heading {
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+#user-email,
+#user-password {
+    border-radius: 5px;
+    width: 55%;
+    padding: 7px 10px;
+    border: 0px;
+    outline: 0px;
+    margin-top: 10px;
+}
+
+#button-submit {
+    background-color: #EA4C89;
+    border-radius: 8px;
+    border-style: none;
+    margin-top: 15px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bolder;
+    height: 40px;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+#button-submit:hover {
+    background-color: #F082AC;
+}
