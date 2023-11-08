@@ -22,12 +22,13 @@ document.getElementById("button-deposit").addEventListener("click", function () 
     } else {
         const depositStored = getStoredDepositAndWithdraw("deposit-stored")
         const currentTotalDeposit = newDepositAmount + depositStored;
-        document.getElementById("deposit-stored").innerText = currentTotalDeposit;
+        const currentTotalDepositDecimal = currentTotalDeposit.toFixed(2);
+        document.getElementById("deposit-stored").innerText = currentTotalDepositDecimal;
         const balanceStored = getStoredDepositAndWithdraw("balance-stored");
         const currentBalaceTotal = balanceStored + newDepositAmount;
-        document.getElementById("balance-stored").innerText = currentBalaceTotal;
+        const currentBalaceTotalDecimal = currentBalaceTotal.toFixed(2);
+        document.getElementById("balance-stored").innerText = currentBalaceTotalDecimal;
     }
-
 })
 
 document.getElementById("button-withdraw").addEventListener("click", function () {
@@ -43,9 +44,11 @@ document.getElementById("button-withdraw").addEventListener("click", function ()
             alert("You will not be able to withdraw more than the current balance amount")
         } else {
             const currentTotalWithdraw = newWithdrawAmount + previousWithdrawAmount;
-            document.getElementById("withdraw-stored").innerText = currentTotalWithdraw;
+            const currentTotalWithdrawDecimals = currentTotalWithdraw.toFixed(2);
+            document.getElementById("withdraw-stored").innerText = currentTotalWithdrawDecimals;
             const reducedBalanceTotal = currentTotalBalance - newWithdrawAmount;
-            document.getElementById("balance-stored").innerText = reducedBalanceTotal;
+            const reducedBalanceTotalDecimal = reducedBalanceTotal.toFixed(2);
+            document.getElementById("balance-stored").innerText = reducedBalanceTotalDecimal;
         }
     }
 })
