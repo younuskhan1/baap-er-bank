@@ -44,7 +44,9 @@
     margin-top: 10px;
 }
 
-#button-submit {
+#button-submit,
+#button-deposit,
+#button-withdraw {
     background-color: #EA4C89;
     border-radius: 8px;
     border-style: none;

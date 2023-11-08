@@ -8,6 +8,7 @@ function getFormInputValue(inputId) {
 document.getElementById("button-submit").addEventListener("click", function () {
     const userEmail = getFormInputValue("user-email");
     const userPassword = getFormInputValue("user-password");
+    console.log(userEmail, userPassword);
     if ((userEmail === "irfanjamil.du93rd@gmail.com") && (userPassword === "amarsonarbangla")) {
         window.location.href = "bank.html";
     } else {

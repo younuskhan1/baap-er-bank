@@ -15,7 +15,7 @@
     <section id="some-money-section">
         <div id="deposit-division">
             <h1 id="deposit-title">Deposit</h1>
-            <p id="deposit-money">$ <span>00</span></p>
+            <p id="deposit-money">$ <span id="deposit-store">00</span></p>
         </div>
         <div id="withdraw-division">
             <h1 id="deposit-title">Withdraw</h1>
@@ -23,7 +23,7 @@
         </div>
         <div id="balance-division">
             <h1 id="deposit-title">Balance</h1>
-            <p id="deposit-money"> $ <span>00</span></p>
+            <p id="deposit-money"> $ <span id="balance-stored">1240</span></p>
         </div>
     </section>
     <section id="calculation">
@@ -31,16 +31,16 @@
             <h1 id="login-heading">Please Deposit here</h1>
             <input type="number" id="deposit-amount" placeholder="Enter Your Deposit Amount">
             <br>
-            <button type="button" id="button-submit">Deposit</button>
+            <button type="button" id="button-deposit">Deposit</button>
         </div>
         <div id="withdraw-calculation">
             <h1 id="login-heading">Please Withdraw here</h1>
             <input type="number" id="withdraw-amount" placeholder="Enter Your withdraw Amount">
             <br>
-            <button type="button" id="button-submit">Withdraw</button>
+            <button type="button" id="button-withdraw">Withdraw</button>
         </div>
     </section>
-    <script src="./index.js"></script>
+    <script src="./deposit.js"></script>
 </body>
 
 </html>
