@@ -60,7 +60,9 @@
     text-align: center;
 }
 
-#button-submit:hover {
+#button-submit:hover,
+#button-deposit:hover,
+#button-withdraw:hover {
     background-color: #F082AC;
 }
 

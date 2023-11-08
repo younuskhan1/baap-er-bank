@@ -13,13 +13,39 @@ function getStoredDepositAndWithdraw(storedAmountId) {
     return storedAmountInNumber;
 }
 
-
 document.getElementById("button-deposit").addEventListener("click", function () {
     const newDepositAmount = getDepositAndWithdraw("deposit-amount");
-    const depositStored = getStoredDepositAndWithdraw("deposit-store")
-    const currentTotalDeposit = newDepositAmount + depositStored;
-    document.getElementById("deposit-store").innerText = currentTotalDeposit;
-    const balanceStored = getStoredDepositAndWithdraw("balance-stored");
-    const currentBalaceTotal = balanceStored + newDepositAmount;
-    document.getElementById("balance-stored").innerText = currentBalaceTotal;
+    if (newDepositAmount < 0) {
+        alert("Please provide me a positive numeric value.");
+    } else if (isNaN(newDepositAmount)) {
+        alert("Please fill up the input field and provide me a positive numeric value.");
+    } else {
+        const depositStored = getStoredDepositAndWithdraw("deposit-stored")
+        const currentTotalDeposit = newDepositAmount + depositStored;
+        document.getElementById("deposit-stored").innerText = currentTotalDeposit;
+        const balanceStored = getStoredDepositAndWithdraw("balance-stored");
+        const currentBalaceTotal = balanceStored + newDepositAmount;
+        document.getElementById("balance-stored").innerText = currentBalaceTotal;
+    }
+
+})
+
+document.getElementById("button-withdraw").addEventListener("click", function () {
+    const newWithdrawAmount = getDepositAndWithdraw("withdraw-amount");
+    if (newWithdrawAmount < 0) {
+        alert("Please provide me a positive numeric value.");
+    } else if (isNaN(newWithdrawAmount)) {
+        alert("Please fill up the input field and provide me a positive numeric value.");
+    } else {
+        const previousWithdrawAmount = getStoredDepositAndWithdraw("withdraw-stored");
+        const currentTotalBalance = getStoredDepositAndWithdraw("balance-stored");
+        if (newWithdrawAmount > currentTotalBalance) {
+            alert("You will not be able to withdraw more than the current balance amount")
+        } else {
+            const currentTotalWithdraw = newWithdrawAmount + previousWithdrawAmount;
+            document.getElementById("withdraw-stored").innerText = currentTotalWithdraw;
+            const reducedBalanceTotal = currentTotalBalance - newWithdrawAmount;
+            document.getElementById("balance-stored").innerText = reducedBalanceTotal;
+        }
+    }
 })
